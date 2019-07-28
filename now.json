@@ -1,1 +1,9 @@
-{"name":"hackathon-boilerplate"}
+{
+  "name": "hackathon-boilerplate",
+  "builds": [
+    {
+      "src": "frontend",
+      "use": "@now/next"
+    }
+  ]
+}

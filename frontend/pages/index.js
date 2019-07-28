@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-import Head from 'next/head';
+import { useEffect, useState } from "react";
+import Head from "next/head";
 
 function Index() {
   const [date, setDate] = useState([]);
   useEffect(() => {
     async function getDate() {
-      const res = await fetch('/api/date');
+      const res = await fetch("/api/date");
       const newDate = await res.json();
       setDate(newDate);
     }
@@ -16,9 +16,10 @@ function Index() {
       <Head>
         <title>Next.js + Node API</title>
       </Head>
+      <h1>Test serverless</h1>
       <h1>Next.js + Node.js API</h1>
       <h2>
-        Deployed with{' '}
+        Deployed with{" "}
         <a
           href="https://zeit.co/docs"
           target="_blank"
@@ -35,11 +36,11 @@ function Index() {
           rel="noreferrer noopener"
         >
           This project
-        </a>{' '}
-        is a <a href="https://nextjs.org/">Next.js</a> app with two directories,{' '}
+        </a>{" "}
+        is a <a href="https://nextjs.org/">Next.js</a> app with two directories,{" "}
         <code>/static</code> for static content and <code>/pages</code> which
-        contains content and <code>/api</code>, a serverless{' '}
-        <a href="https://nodejs.org/en/">Node.js</a> function. See{' '}
+        contains content and <code>/api</code>, a serverless{" "}
+        <a href="https://nodejs.org/en/">Node.js</a> function. See{" "}
         <a href="/pages/api/date.js">
           <code>api/date.js</code> for the Date API with Node.js
         </a>
@@ -47,14 +48,14 @@ function Index() {
       </p>
       <br />
       <h2>The date according to Node.js is:</h2>
-      <p>{date ? date.date : 'Loading date...'}</p>
+      <p>{date ? date.date : "Loading date..."}</p>
       <style jsx>{`
         main {
           align-content: center;
           box-sizing: border-box;
           display: grid;
-          font-family: 'SF Pro Text', 'SF Pro Icons', 'Helvetica Neue',
-            'Helvetica', 'Arial', sans-serif;
+          font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
+            "Helvetica", "Arial", sans-serif;
           hyphens: auto;
           line-height: 1.65;
           margin: 0 auto;
@@ -92,7 +93,7 @@ function Index() {
         }
         code:before,
         code:after {
-          content: '\`';
+          content: "\`";
         }
       `}</style>
     </main>
