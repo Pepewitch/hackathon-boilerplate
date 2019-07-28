@@ -2,7 +2,7 @@
   "name": "hackathon-boilerplate",
   "builds": [
     {
-      "src": "frontend",
+      "src": "frontend/**/*",
       "use": "@now/next"
     }
   ]
