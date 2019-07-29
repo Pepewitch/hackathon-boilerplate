@@ -1,0 +1,16 @@
+type User {
+  id: ID! @id
+  username: String!
+  password: String!
+  email: String! @unique
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  messages: [Message!]!
+}
+
+type Message {
+  id: ID! @id
+  content: String!
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+}

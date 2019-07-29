@@ -1,0 +1,12 @@
+endpoint: https://us1.prisma.sh/witchayut-jong-568576/api/dev
+datamodel: schema/datamodel.prisma
+
+generate:
+  - generator: typescript-client
+    output: ./src/generated/prisma-client/
+  # - generator: graphql-schema
+  #   output: ./generated/schema.graphql
+
+hooks:
+  post-deploy:
+    - yarn generate:nexus
